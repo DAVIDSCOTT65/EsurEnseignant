@@ -2,32 +2,46 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
-namespace LibraryEnseignant
+namespace ESUR_GUI.Classes
 {
-    public class Grade
+    public class Glossaires
     {
-        public int Id { get; set; }
-        public string Designation { get; set; }
-        public string Acronyme { get; set; }
-        public DateTime DateEnregistre { get; set; }
-        public void SaveDatas(Grade g)
+        SqlConnection con = null;
+        SqlCommand cmd = null;
+        SqlDataReader dr = null;
+        SqlDataAdapter dt = null;
+
+        static Glossaires _instance = null;
+        public static Glossaires getInstance()
+        {
+            if (_instance == null)
+                _instance = new Glossaires();
+            return _instance;
+        }
+        public void chargeCombo(DropDownList cmb, string procedure)
         {
             connecter();
             if (ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Closed)
                 ImplementeConnexion.Instance.Conn.Open();
             using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
             {
-                cmd.CommandText = "INSERT_GRADE";
+                cmd.CommandText = procedure;
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@idModif", 10, DbType.Int32, g.Id));
-                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@designation", 100, DbType.String, g.Designation));
-                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@acro", 20, DbType.String, g.Acronyme));
+                IDataReader rd = cmd.ExecuteReader();
 
-                cmd.ExecuteNonQuery();
+                while (rd.Read())
+                {
+                    string de = rd["Designation"].ToString();
+                    cmb.Items.Add(de);
+                }
+                rd.Close();
+                rd.Dispose();
             }
         }
         public void connecter()

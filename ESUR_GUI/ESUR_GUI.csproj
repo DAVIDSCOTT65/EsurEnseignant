@@ -75,7 +75,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="esu.aspx" />
+    <Content Include="index.aspx" />
     <Content Include="images\demo\1.gif" />
     <Content Include="images\demo\2.gif" />
     <Content Include="images\demo\200x140.gif" />
@@ -90,7 +90,6 @@
     <Content Include="images\demo\imgr.gif" />
     <Content Include="images\demo\index.html" />
     <Content Include="images\index.html" />
-    <Content Include="index.html" />
     <Content Include="layout\index.html" />
     <Content Include="layout\scripts\index.html" />
     <Content Include="layout\scripts\jquery.min.js" />
@@ -114,17 +113,42 @@
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\tables.css" />
     <Content Include="pages\full-width.html" />
+    <Content Include="pages\gradeEnseignant.aspx" />
+    <Content Include="pages\identification.aspx" />
     <Content Include="pages\index.html" />
     <Content Include="pages\style-demo.html" />
+    <Content Include="pages\typeEnseignant.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="esu.aspx.cs">
-      <DependentUpon>esu.aspx</DependentUpon>
+    <Compile Include="Classes\Glossaires.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="esu.aspx.designer.cs">
-      <DependentUpon>esu.aspx</DependentUpon>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\gradeEnseignant.aspx.cs">
+      <DependentUpon>gradeEnseignant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\gradeEnseignant.aspx.designer.cs">
+      <DependentUpon>gradeEnseignant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\identification.aspx.cs">
+      <DependentUpon>identification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\identification.aspx.designer.cs">
+      <DependentUpon>identification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\typeEnseignant.aspx.cs">
+      <DependentUpon>typeEnseignant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\typeEnseignant.aspx.designer.cs">
+      <DependentUpon>typeEnseignant.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
