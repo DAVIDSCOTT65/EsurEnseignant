@@ -11,6 +11,7 @@ namespace ESUR_GUI.pages
 {
     public partial class identification : System.Web.UI.Page
     {
+        public int id = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             Glossaires.getInstance().chargeCombo(cmbType, "SELECT_DESIGNATION_TYPE");
@@ -21,7 +22,24 @@ namespace ESUR_GUI.pages
         {
             try
             {
-                Enseignant e = new Enseignant();
+                Enseignant en = new Enseignant();
+                en.Id = id;
+                en.Nom = txtNom.Text;
+                en.Postnom = txtPostnom.Text;
+                en.Prenom = txtPrenom.Text;
+                en.Sexe = cmbSexe.Text;
+                en.DBO = Convert.ToDateTime(txtDate.SelectedDate);
+                en.AnneeFinEtude = Convert.ToInt32(txtAnnee.Text);
+                en.Filiere = txtFiliere.Text;
+                en.RefGrade = Convert.ToInt32(Glossaires.getInstance().GetID("GetIdGrade", cmbGrade.Text));
+                en.RefType = Convert.ToInt32(Glossaires.getInstance().GetID("GetIdType", cmbType.Text));
+                en.Pseudo = userTxt.Text;
+                en.Pass = txtPass.Text;
+                
+
+                en.SaveDatas(en);
+
+                Response.Redirect("identification.aspx");
             }
             catch (Exception ex)
             {

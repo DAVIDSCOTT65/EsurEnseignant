@@ -35,6 +35,8 @@ namespace ESUR_GUI.Classes
 
                 IDataReader rd = cmd.ExecuteReader();
 
+                cmb.Items.Clear();
+
                 while (rd.Read())
                 {
                     string de = rd["Designation"].ToString();
@@ -43,6 +45,30 @@ namespace ESUR_GUI.Classes
                 rd.Close();
                 rd.Dispose();
             }
+        }
+        public string GetID(string procedure,string valeur)
+        {
+            string _id = string.Empty;
+            connecter();
+            if (ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@designation", 100, DbType.String, valeur));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    _id = rd["Id"].ToString();
+                }
+                rd.Dispose();
+            }
+               
+            return _id.ToString();
         }
         public void connecter()
         {
