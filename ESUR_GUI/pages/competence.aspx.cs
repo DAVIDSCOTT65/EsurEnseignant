@@ -5,20 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ESUR_GUI
+namespace ESUR_GUI.pages
 {
-    public partial class esu : System.Web.UI.Page
+    public partial class competence : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-        protected void btnConnect_Click(object sender, EventArgs e)
-        {
-            //if ()
-            //{
-
-            //}
         }
     }
 }

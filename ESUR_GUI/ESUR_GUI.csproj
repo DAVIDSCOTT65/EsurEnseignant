@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +42,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -112,6 +114,7 @@
     <Content Include="layout\styles\loginslider.css" />
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\tables.css" />
+    <Content Include="pages\competence.aspx" />
     <Content Include="pages\full-width.html" />
     <Content Include="pages\gradeEnseignant.aspx" />
     <Content Include="pages\identification.aspx" />
@@ -122,12 +125,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Glossaires.cs" />
+    <Compile Include="Classes\UserSession.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\competence.aspx.cs">
+      <DependentUpon>competence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\competence.aspx.designer.cs">
+      <DependentUpon>competence.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\gradeEnseignant.aspx.cs">
       <DependentUpon>gradeEnseignant.aspx</DependentUpon>

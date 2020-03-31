@@ -23,20 +23,17 @@
       </div>
       <div class="topbox">
         <h2>Login Here</h2>
-        <form action="#" method="post">
+        <form action="#" method="post" runat="server">
           <fieldset>
             <legend>Teachers Login Form</legend>
-            <label for="teachername">Username:
-              <input type="text" name="teachername" id="teachername" value="" />
-            </label>
-            <label for="teacherpass">Password:
-              <input type="password" name="teacherpass" id="teacherpass" value="" />
-            </label>
+              <asp:TextBox ID="teacherName" runat="server" ></asp:TextBox>
+              <asp:TextBox ID="teacherPass" runat="server"></asp:TextBox>
             <label for="teacherremember">
               <input class="checkbox" type="checkbox" name="teacherremember" id="teacherremember" checked="checked" />
               Remember me</label>
             <p>
-              <input type="submit" name="teacherlogin" id="teacherlogin" value="Login" />
+              <%--<input type="submit" name="teacherlogin" id="teacherlogin" value="Login"/>--%>
+              <asp:Button ID="btnConnect" runat="server" Text="Button" />
               &nbsp;
               <input type="reset" name="teacherreset" id="teacherreset" value="Reset" />
             </p>

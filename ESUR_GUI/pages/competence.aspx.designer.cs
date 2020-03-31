@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ESUR_GUI {
+namespace ESUR_GUI.pages {
     
     
-    public partial class esu {
+    public partial class competence {
         
         /// <summary>
-        /// teacherName control.
+        /// txtDesign control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox teacherName;
+        protected global::System.Web.UI.WebControls.TextBox txtDesign;
         
         /// <summary>
-        /// teacherPass control.
+        /// txtAcro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox teacherPass;
+        protected global::System.Web.UI.WebControls.TextBox txtAcro;
         
         /// <summary>
-        /// btnConnect control.
+        /// txtDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConnect;
+        protected global::System.Web.UI.WebControls.DropDownList txtDate;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
     }
 }

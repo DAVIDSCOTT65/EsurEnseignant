@@ -23,6 +23,65 @@ namespace ESUR_GUI.Classes
                 _instance = new Glossaires();
             return _instance;
         }
+        public int loginTest(string nom, string password)
+        {
+            int count = 0;
+            int id = 0;
+            string username = "";
+            string niveau = "";
+            string fonction = "";
+            string ability = "";
+            string etat = "";
+            string maison = "";
+            try
+            {
+                if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                    ImplementeConnexion.Instance.Conn.Open();
+                using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+                {
+                    cmd.CommandText = "SP_Login";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@pseudo", 50, DbType.String, nom));
+                    cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@pass", 200, DbType.String, password));
+
+
+                    IDataReader dr = cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        id = Convert.ToInt32(dr["RefEnseignant"].ToString().Trim());
+                        count += 1;
+                    }
+                    dr.Dispose();
+                    if (count == 1)
+                    {
+
+
+
+                        UserSession.GetInstance().Id = id;
+                        UserSession.GetInstance().UserName = username;
+                        UserSession.GetInstance().Fonction = fonction;
+                        UserSession.GetInstance().Maison = maison;
+
+
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Echec de Connexion.", "Message Serveur...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+
+            }
+            return count;
+        }
         public void chargeCombo(DropDownList cmb, string procedure)
         {
             connecter();
