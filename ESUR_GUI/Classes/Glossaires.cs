@@ -35,6 +35,7 @@ namespace ESUR_GUI.Classes
             string maison = "";
             try
             {
+                connecter();
                 if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
                     ImplementeConnexion.Instance.Conn.Open();
                 using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
@@ -63,6 +64,8 @@ namespace ESUR_GUI.Classes
                         UserSession.GetInstance().UserName = username;
                         UserSession.GetInstance().Fonction = fonction;
                         UserSession.GetInstance().Maison = maison;
+
+                        
 
 
                     }
@@ -100,6 +103,38 @@ namespace ESUR_GUI.Classes
                 {
                     string de = rd["Designation"].ToString();
                     cmb.Items.Add(de);
+                }
+                rd.Close();
+                rd.Dispose();
+            }
+        }
+        public void chargeTextBox(int id,TextBox txt1, TextBox txt2, TextBox txt3, DropDownList txt4, TextBox txt5, TextBox txt6, DropDownList txt7, DropDownList txt8, string procedure,int condition)
+        {
+            connecter();
+            if (ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = procedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@id", 10, DbType.Int32, condition));
+
+                IDataReader rd = cmd.ExecuteReader();
+
+                //cmb.Items.Clear();
+
+                while (rd.Read())
+                {
+                    id = Convert.ToInt32(rd["Id"].ToString());
+                    txt1.Text = rd["Nom"].ToString();
+                    txt2.Text = rd["Postnom"].ToString();
+                    txt3.Text = rd["Prenom"].ToString();
+                    txt4.Text = rd["Sexe"].ToString();
+                    txt5.Text = rd["AnneeFinEtude"].ToString();
+                    txt6.Text = rd["FiliereEtude"].ToString();
+                    txt7.Text = rd["Grade"].ToString();
+                    txt8.Text = rd["Type"].ToString();
                 }
                 rd.Close();
                 rd.Dispose();

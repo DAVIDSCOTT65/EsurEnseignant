@@ -34,6 +34,27 @@ namespace LibraryEnseignant
             ms.Close();
             return bytImage;
         }
+        public void SaveLogin(Enseignant e)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "INSERT_LOGIN";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@idModif", 10, DbType.Int32, e.Id));
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@pseudo", 50, DbType.String, e.Pseudo));
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@pass", 255, DbType.String, e.Pass));
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@statut", 255, DbType.String, "Enseignant"));
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@nom", 255, DbType.String, e.Nom));
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@postnom", 255, DbType.String, e.Postnom));
+
+                cmd.ExecuteNonQuery();
+
+
+            }
+        }
         public void SaveDatas(Enseignant e)
         {
             if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
@@ -53,12 +74,12 @@ namespace LibraryEnseignant
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@filiere", 100, DbType.String, e.Filiere));
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@refgrade", 20, DbType.Int32, e.RefGrade));
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@reftype", 20, DbType.Int32, e.RefType));
-                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@pseudo", 50, DbType.String, e.Pseudo));
-                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@pass", 255, DbType.String, e.Pass));
 
 
 
                 cmd.ExecuteNonQuery();
+
+                SaveLogin(e);
 
                 
             }

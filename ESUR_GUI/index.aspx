@@ -33,7 +33,7 @@
               Remember me</label>
             <p>
               <%--<input type="submit" name="teacherlogin" id="teacherlogin" value="Login"/>--%>
-              <asp:Button ID="btnConnect" runat="server" Text="Button" />
+              <asp:Button ID="btnConnect" runat="server" Text="Button" OnClick="btnConnect_Click"/>
               &nbsp;
               <input type="reset" name="teacherreset" id="teacherreset" value="Reset" />
             </p>
@@ -89,11 +89,11 @@
           <li class="last"><a href="#">Assistant</a></li>
         </ul>
       </li>
-      <li><a href="pages/identification.aspx">Identification</a>
+      <li><a href="pages/identification.aspx">Options</a>
         <ul>
           <li><a href="#">Enseignant NP</a></li>
           <li><a href="#">Enseignant NU</a></li>
-          <li class="last"><a href="#">Enseignant Identifier</a></li>
+          <li class="last"><a href="pages/identification.aspx">Enseignant Identifier</a></li>
         </ul>
       </li>
       <li><a href="#">Nos Services</a></li>

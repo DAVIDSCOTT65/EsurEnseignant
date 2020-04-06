@@ -16,6 +16,7 @@ namespace ESUR_GUI.pages
         {
             Glossaires.getInstance().chargeCombo(cmbType, "SELECT_DESIGNATION_TYPE");
             Glossaires.getInstance().chargeCombo(cmbGrade, "SELECT_DESIGNATION_GRADE");
+            Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom,txtPrenom,cmbSexe,txtAnnee,txtFiliere,cmbGrade,cmbType, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

@@ -97,8 +97,11 @@
           
         </ul>
       </li>
-      <li class="active"><a href="identification.aspx">Identification</a>
+      <li class="active"><a href="identification.aspx">Options</a>
         <ul>
+          <li><a href="#">Enseignant NP</a></li>
+          <li><a href="#">Enseignant NU</a></li>
+          <li style="width: 82px"><a href="#">Identifiers</a></li>
           <li><a href="typeEnseignant.aspx">Type enseignants</a></li>
           <li class="auto-style7"><a href="gradeEnseignant.aspx">Grades</a></li>
           <li class="last" style="color: #FFFFFF; background-color: #591434"><a href="identification.aspx">Enregistrement</a></li>

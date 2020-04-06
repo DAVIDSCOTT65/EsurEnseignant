@@ -12,9 +12,10 @@ namespace ESUR_GUI.pages
     public partial class gradeEnseignant : System.Web.UI.Page
     {
         public int id = 0;
+        Glossaires dn = new Glossaires();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         protected void btnSave_Click(object sender, EventArgs e)

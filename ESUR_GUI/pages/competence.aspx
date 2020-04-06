@@ -24,7 +24,7 @@
 </head>
 <body>
     <div class="wrapper col0">
-  <div id="topbar">
+  <%--<div id="topbar">
     <div id="slidepanel">
       <div class="topbox">
         <h2>MIN/ESUR RDC</h2>
@@ -62,7 +62,7 @@
       </ul>
     </div>
     <br class="clear" />
-  </div>
+  </div>--%>
 </div>
 <!-- ####################################################################################################### -->
 <div class="wrapper col1">
@@ -98,7 +98,11 @@
       </li>
       <li class="active"><a href="identification.aspx">Identification</a>
         <ul>
-           <li><a href="typeEnseignant.aspx">Type enseignants</a></li>
+          <li><a href="competence.aspx">Mes compétences</a></li>
+          <li><a href="#">Enseignant NP</a></li>
+          <li><a href="#">Enseignant NU</a></li>
+          <li style="width: 82px"><a href="#">Identifiers</a></li>
+          <li><a href="typeEnseignant.aspx">Type enseignants</a></li>
           <li class="auto-style7"><a href="gradeEnseignant.aspx">Grades</a></li>
           <li class="last" style="color: #FFFFFF; background-color: #591434"><a href="identification.aspx">Enregistrement</a></li>
         </ul>
@@ -127,7 +131,7 @@
                 <tr>
                     <td class="auto-style5">Domaine</td>
                     <td>
-                        <asp:TextBox ID="txtAcro" runat="server" Width="406px" Height="27px"></asp:TextBox>
+                        <asp:TextBox ID="txtDomaine" runat="server" Width="406px" Height="27px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -142,7 +146,7 @@
                     </td>
                 </tr>
             </table>
-            <asp:Button ID="btnSave" runat="server" Text="Enregistrer" CssClass="auto-style6" Height="34px" OnClick="btnSave_Click" ToolTip="Save the datas" Width="263px" />
+            <asp:Button ID="btnSave" runat="server" Text="Enregistrer" CssClass="auto-style6" Height="34px" ToolTip="Save the datas" Width="263px" OnClick="btnSave_Click" />
 
         </form>
       </div>
