@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ESUR_GUI.pages {
+namespace ESUR_GUI {
     
     
     public partial class identification {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// txtNom control.
@@ -29,15 +20,6 @@ namespace ESUR_GUI.pages {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNom;
-        
-        /// <summary>
-        /// img control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image img;
         
         /// <summary>
         /// txtPostnom control.
@@ -73,7 +55,7 @@ namespace ESUR_GUI.pages {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar txtDate;
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
         
         /// <summary>
         /// txtAnnee control.

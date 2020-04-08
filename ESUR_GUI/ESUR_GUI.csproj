@@ -68,7 +68,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="pages\competence.aspx" />
+    <Content Include="pages\identification.aspx" />
     <Content Include="packages.config" />
+    <Content Include="home.aspx" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -114,10 +118,8 @@
     <Content Include="layout\styles\loginslider.css" />
     <Content Include="layout\styles\navi.css" />
     <Content Include="layout\styles\tables.css" />
-    <Content Include="pages\competence.aspx" />
     <Content Include="pages\full-width.html" />
     <Content Include="pages\gradeEnseignant.aspx" />
-    <Content Include="pages\identification.aspx" />
     <Content Include="pages\index.html" />
     <Content Include="pages\style-demo.html" />
     <Content Include="pages\typeEnseignant.aspx" />
@@ -126,19 +128,26 @@
   <ItemGroup>
     <Compile Include="Classes\Glossaires.cs" />
     <Compile Include="Classes\UserSession.cs" />
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="pages\competence.aspx.cs">
       <DependentUpon>competence.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\competence.aspx.designer.cs">
       <DependentUpon>competence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\identification.aspx.cs">
+      <DependentUpon>identification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\identification.aspx.designer.cs">
+      <DependentUpon>identification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\gradeEnseignant.aspx.cs">
       <DependentUpon>gradeEnseignant.aspx</DependentUpon>
@@ -147,12 +156,12 @@
     <Compile Include="pages\gradeEnseignant.aspx.designer.cs">
       <DependentUpon>gradeEnseignant.aspx</DependentUpon>
     </Compile>
-    <Compile Include="pages\identification.aspx.cs">
-      <DependentUpon>identification.aspx</DependentUpon>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="pages\identification.aspx.designer.cs">
-      <DependentUpon>identification.aspx</DependentUpon>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\typeEnseignant.aspx.cs">
       <DependentUpon>typeEnseignant.aspx</DependentUpon>
@@ -162,6 +171,13 @@
       <DependentUpon>typeEnseignant.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataBaseUtilities\DataBaseUtilities.csproj">

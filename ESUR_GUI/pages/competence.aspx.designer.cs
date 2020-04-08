@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ESUR_GUI.pages {
+namespace ESUR_GUI {
     
     
     public partial class competence {

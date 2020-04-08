@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ESUR_GUI.pages
+namespace ESUR_GUI
 {
     public partial class identification : System.Web.UI.Page
     {
@@ -16,7 +16,7 @@ namespace ESUR_GUI.pages
         {
             Glossaires.getInstance().chargeCombo(cmbType, "SELECT_DESIGNATION_TYPE");
             Glossaires.getInstance().chargeCombo(cmbGrade, "SELECT_DESIGNATION_GRADE");
-            Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom,txtPrenom,cmbSexe,txtAnnee,txtFiliere,cmbGrade,cmbType, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
+            Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom, txtPrenom, cmbSexe, txtAnnee, txtFiliere, cmbGrade, cmbType, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -29,14 +29,14 @@ namespace ESUR_GUI.pages
                 en.Postnom = txtPostnom.Text;
                 en.Prenom = txtPrenom.Text;
                 en.Sexe = cmbSexe.Text;
-                en.DBO = Convert.ToDateTime(txtDate.SelectedDate);
+                en.DBO = Convert.ToDateTime(txtDate.Text);
                 en.AnneeFinEtude = Convert.ToInt32(txtAnnee.Text);
                 en.Filiere = txtFiliere.Text;
                 en.RefGrade = Convert.ToInt32(Glossaires.getInstance().GetID("GetIdGrade", cmbGrade.Text));
                 en.RefType = Convert.ToInt32(Glossaires.getInstance().GetID("GetIdType", cmbType.Text));
                 en.Pseudo = userTxt.Text;
                 en.Pass = txtPass.Text;
-                
+
 
                 en.SaveDatas(en);
 
@@ -45,7 +45,7 @@ namespace ESUR_GUI.pages
             catch (Exception ex)
             {
 
-                
+
             }
         }
     }

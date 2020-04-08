@@ -11,9 +11,15 @@
     <script type="text/javascript" src="layout/scripts/jquery.slidepanel.setup.js"></script>
     <script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
     <script type="text/javascript" src="layout/scripts/jquery.tabs.setup.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            left: 0;
+            top: 35px;
+        }
+    </style>
 </head>
 <body>
-    <div class="wrapper col0">
+  <div class="wrapper col0">
   <div id="topbar">
     <div id="slidepanel">
       <div class="topbox">
@@ -75,7 +81,7 @@
   <div id="topnav">
     <ul>
       <li class="active"><a href="index.html">Home</a>
-        <ul>
+        <ul class="auto-style1">
           <li><a href="#">A propos</a></li>
           <li><a href="#">Qui sommes-nous ?</a></li>
           <li><a href="#">Historique</a></li>
@@ -217,8 +223,8 @@
 <!-- ####################################################################################################### -->
 <div class="wrapper col6">
   <div id="copyright">
-    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; <%: DateTime.Now.Year %> - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">David Mirindi Coding Concept</p>
     <br class="clear" />
   </div>
 </div>

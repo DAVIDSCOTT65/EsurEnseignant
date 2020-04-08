@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ESUR_GUI.pages
+namespace ESUR_GUI
 {
     public partial class competence : System.Web.UI.Page
     {
@@ -39,7 +39,7 @@ namespace ESUR_GUI.pages
             catch (Exception ex)
             {
 
-                
+
             }
         }
     }
