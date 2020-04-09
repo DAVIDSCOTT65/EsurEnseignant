@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="identification.aspx.cs" Inherits="ESUR_GUI.identification" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="identification.aspx.cs" Inherits="ESUR_GUI.identification" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     identification
 </asp:Content>
@@ -94,8 +94,54 @@
                     </td>
                 </tr>
             </table>
+        <br /><br /><br />
             <asp:Button ID="btnSave" runat="server" Text="Enregistrer" CssClass="auto-style6" Height="34px" OnClick="btnSave_Click" ToolTip="Save the datas" Width="263px" />
-
+        <br /><br /><br />
+            
+        <asp:DataList ID="DataList1" runat="server" DataKeyField="Id" DataSourceID="SqlDataSource" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="195px" OnSelectedIndexChanged="DataList1_SelectedIndexChanged" RepeatDirection="Horizontal">
+            <AlternatingItemStyle BackColor="White" />
+            <FooterStyle BackColor="#CCCC99" />
+            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+            <ItemStyle BackColor="#F7F7DE" />
+            <ItemTemplate>
+                Id:
+                <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
+                <br />
+                Matricule:
+                <asp:Label ID="MatriculeLabel" runat="server" Text='<%# Eval("Matricule") %>' />
+                <br />
+                Nom:
+                <asp:Label ID="NomLabel" runat="server" Text='<%# Eval("Nom") %>' />
+                <br />
+                Postnom:
+                <asp:Label ID="PostnomLabel" runat="server" Text='<%# Eval("Postnom") %>' />
+                <br />
+                Prenom:
+                <asp:Label ID="PrenomLabel" runat="server" Text='<%# Eval("Prenom") %>' />
+                <br />
+                Sexe:
+                <asp:Label ID="SexeLabel" runat="server" Text='<%# Eval("Sexe") %>' />
+                <br />
+                DOB:
+                <asp:Label ID="DOBLabel" runat="server" Text='<%# Eval("DOB") %>' />
+                <br />
+                AnneeFinEtude:
+                <asp:Label ID="AnneeFinEtudeLabel" runat="server" Text='<%# Eval("AnneeFinEtude") %>' />
+                <br />
+                FiliereEtude:
+                <asp:Label ID="FiliereEtudeLabel" runat="server" Text='<%# Eval("FiliereEtude") %>' />
+                <br />
+                Grade:
+                <asp:Label ID="GradeLabel" runat="server" Text='<%# Eval("Grade") %>' />
+                <br />
+                Type:
+                <asp:Label ID="TypeLabel" runat="server" Text='<%# Eval("Type") %>' />
+                <br />
+<br />
+            </ItemTemplate>
+            <SelectedItemStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+        </asp:DataList>
+        <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ESUR_DATABASAEConnectionString %>" SelectCommand="SELECT * FROM [Affichage_Enseignant]"></asp:SqlDataSource>
       </div>
   </div>
 &nbsp;

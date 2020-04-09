@@ -23,8 +23,7 @@ namespace ESUR_GUI
             else
             {
                 Glossaires.getInstance().loginTest(teacherName.Text, teacherPass.Text);
-                Response.Redirect("pages/identification.aspx");
-
+                Response.Redirect("identification.aspx");
             }
         }
     }

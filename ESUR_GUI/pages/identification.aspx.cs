@@ -48,5 +48,10 @@ namespace ESUR_GUI
 
             }
         }
+
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

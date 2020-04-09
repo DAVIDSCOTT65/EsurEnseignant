@@ -1,4 +1,4 @@
-﻿using DataBaseUtilities;
+﻿using ESUR_GUI.Classes;
 using LibraryEnseignant;
 using System;
 using System.Collections.Generic;
@@ -9,36 +9,33 @@ using System.Web.UI.WebControls;
 
 namespace ESUR_GUI.pages
 {
-    public partial class typeEnseignant : System.Web.UI.Page
+    public partial class grade : System.Web.UI.Page
     {
         public int id = 0;
+        Glossaires dn = new Glossaires();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
 
+        }
         protected void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                TypeEnseignant t = new TypeEnseignant();
+                Grade g = new Grade();
 
-                t.Id = id;
-                t.Designation = txtDesign.Text;
-                t.Accronyme = txtAcro.Text;
+                g.Id = id;
+                g.Designation = txtDesign.Text;
+                g.Acronyme = txtAcro.Text;
 
-                t.SaveDatas(t);
+                g.SaveDatas(g);
 
-                Response.Redirect("typeEnseignant.aspx");
-
+                Response.Redirect("grade.aspx");
             }
             catch (Exception ex)
             {
 
-                
+
             }
         }
-        
-
     }
 }

@@ -10,13 +10,18 @@
         </asp:ContentPlaceHolder>
     </title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-    <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="layout/scripts/jquery.slidepanel.setup.js"></script>
-    <script type="text/javascript" src="layout/scripts/jquery.ui.min.js"></script>
-    <script type="text/javascript" src="layout/scripts/jquery.tabs.setup.js"></script>
+    <link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+    <script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../layout/scripts/jquery.slidepanel.setup.js"></script>
+    <script type="text/javascript" src="../layout/scripts/jquery.ui.min.js"></script>
+    <script type="text/javascript" src="../layout/scripts/jquery.tabs.setup.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 67px;
+        }
+    </style>
 </head>
 <body>
 
@@ -80,22 +85,22 @@
 <div class="wrapper col2">
   <div id="topnav">
     <ul>
-      <li class="active"><a href="../home.aspx">Home</a>
+      <li><a href="home.aspx">Home</a>
         <ul>
-          <li><a href="#">A propos</a></li>
-          <li><a href="#">Qui sommes-nous ?</a></li>
+          <li><a href="grade.aspx">Grade</a></li>
+          <li><a href="type.aspx">Type</a></li>
           <li><a href="#">Historique</a></li>
           <li class="last"><a href="#">MINESU</a></li>
         </ul>
       </li>
-      <li><a href="#">Vous rechercher un enseignant ?</a>
+      <li><a href="rechercher.aspx">Vous rechercher un enseignant ?</a>
         <ul>
           <li><a href="#">Professeur</a></li>
           <li><a href="#">Docteur</a></li>
           <li class="last"><a href="#">Assistant</a></li>
         </ul>
       </li>
-      <li><a href="pages/identification.aspx">Options</a>
+      <li><a href="identification.aspx">Options</a>
         <ul>
           <li><a href="#">Enseignant NP</a></li>
           <li><a href="#">Enseignant NU</a></li>
@@ -113,9 +118,19 @@
                 
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+        
     <div class="wrapper col5">
   <div id="footer">
+      <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" class="auto-style1" />
+        </fieldset>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
     <div class="footbox">
       <h2>Lacus interdum</h2>
       <ul>
@@ -149,6 +164,7 @@
     <br class="clear" />
   </div>
 </div>
+    </form>
 <!-- ####################################################################################################### -->
 <div class="wrapper col6">
   <div id="copyright">

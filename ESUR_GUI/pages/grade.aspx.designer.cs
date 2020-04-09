@@ -10,7 +10,7 @@
 namespace ESUR_GUI.pages {
     
     
-    public partial class gradeEnseignant {
+    public partial class grade {
         
         /// <summary>
         /// txtDesign control.
