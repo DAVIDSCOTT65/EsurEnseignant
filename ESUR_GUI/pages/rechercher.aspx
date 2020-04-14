@@ -6,35 +6,24 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" runat="server">
     <h1> Vous recherchez un enseignant</h1>
-
-    <asp:DataList ID="DataList1" runat="server" BorderColor="#996633" CellPadding="10" CellSpacing="10" DataKeyField="Id" DataSourceID="SqlDataSource" RepeatDirection="Horizontal">
-        <ItemTemplate>
-            Matricule:
-            <asp:Label ID="MatriculeLabel" runat="server" Text='<%# Eval("Matricule") %>' />
-            <br />
-            Identité:
-            <asp:Label ID="IdentitéLabel" runat="server" Text='<%# Eval("Identité") %>' />
-            <br />
-            Sexe:
-            <asp:Label ID="SexeLabel" runat="server" Text='<%# Eval("Sexe") %>' />
-            <br />
-            AnneeFinEtude:
-            <asp:Label ID="AnneeFinEtudeLabel" runat="server" Text='<%# Eval("AnneeFinEtude") %>' />
-            <br />
-            FiliereEtude:
-            <asp:Label ID="FiliereEtudeLabel" runat="server" Text='<%# Eval("FiliereEtude") %>' />
-            <br />
-            Domaine:
-            <asp:Label ID="DomaineLabel" runat="server" Text='<%# Eval("Domaine") %>' />
-            <br />
-            cours:
-            <asp:Label ID="coursLabel" runat="server" Text='<%# Eval("cours") %>' />
-            <br />
-            NiveauMetrise:
-            <asp:Label ID="NiveauMetriseLabel" runat="server" Text='<%# Eval("NiveauMetrise") %>' />
-            <br />
-<br />
-        </ItemTemplate>
-</asp:DataList>
-<asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ESUR_DATABASAEConnectionString %>" SelectCommand="SELECT * FROM [Affichage_Enseignant_Competence]"></asp:SqlDataSource>
-</asp:Content>
+        <asp:DataList ID="DataList1" runat="server" RepeatColums="3" CellPadding="4" ForeColor="#333333" RepeatDirection="Horizontal">
+             <AlternatingItemStyle BackColor="White" />
+             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+             <ItemStyle BackColor="#EFF3FB" />
+             <ItemTemplate>
+                <table border="0">
+                    <tr>
+                        <td><%#Eval("Enseignant") %></td>
+                    </tr>
+                    <tr>
+                        <hr />
+                        <td><asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("UrlImage") %>' ImageAlign="Bottom" /></td>
+                        <td><%#Eval("FiliereEtude") %></td>
+                        <td><%#Eval("AnneeFinEtude") %></td>
+                    </tr>
+                </table>
+            </ItemTemplate>
+             <SelectedItemStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        </asp:DataList>
+    </asp:Content>

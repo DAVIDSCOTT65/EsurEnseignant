@@ -68,6 +68,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\demo\DVD.PNG" />
+    <Content Include="images\demo\DVD1.jpg" />
+    <Content Include="images\demo\IMG_4396.JPG" />
+    <Content Include="images\demo\IMG_4397.JPG" />
+    <Content Include="images\demo\IMG_4398.JPG" />
+    <Content Include="images\demo\indexgfgy.jpg" />
+    <Content Include="images\demo\indexgggguyygy.jpg" />
     <Content Include="pages\competence.aspx" />
     <Content Include="pages\grade.aspx" />
     <Content Include="pages\identification.aspx" />

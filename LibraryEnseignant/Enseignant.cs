@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace LibraryEnseignant
 {
@@ -21,18 +22,17 @@ namespace LibraryEnseignant
         public string Filiere { get; set; }
         public int RefGrade { get; set; }
         public int RefType { get; set; }
-        public Image Photo { get; set; }
+        public FileUpload File { get; set; }
+        public string UrlImage { get; set; }
         public string Pseudo { get; set; }
         public string Pass { get; set; }
-        private byte[] ConverttoByteImage(Image img)
+        private byte[] ConvertImageToByte(FileUpload img)
         {
-            MemoryStream ms = new MemoryStream();
-            Bitmap bmpImage = new Bitmap(img);
-            byte[] bytImage;
-            bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            bytImage = ms.ToArray();
-            ms.Close();
-            return bytImage;
+            HttpPostedFile postedFiles = img.PostedFile;
+            Stream stream = postedFiles.InputStream;
+            BinaryReader binaryReader = new BinaryReader(stream);
+            Byte[] bytes = binaryReader.ReadBytes((int)stream.Length);
+            return bytes;
         }
         public void SaveLogin(Enseignant e)
         {
@@ -74,7 +74,7 @@ namespace LibraryEnseignant
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@filiere", 100, DbType.String, e.Filiere));
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@refgrade", 20, DbType.Int32, e.RefGrade));
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@reftype", 20, DbType.Int32, e.RefType));
-
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@url", 255, DbType.String, UrlImage));
 
 
                 cmd.ExecuteNonQuery();
