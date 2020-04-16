@@ -68,8 +68,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\demo\DVD.PNG" />
-    <Content Include="images\demo\DVD1.jpg" />
+    <Content Include="images\profiles\DVD.PNG" />
+    <Content Include="images\profiles\DVD1.jpg" />
     <Content Include="images\demo\IMG_4396.JPG" />
     <Content Include="images\demo\IMG_4397.JPG" />
     <Content Include="images\demo\IMG_4398.JPG" />
@@ -101,10 +101,9 @@
     <Content Include="images\demo\4.gif" />
     <Content Include="images\demo\60x60.gif" />
     <Content Include="images\demo\80x80.gif" />
-    <Content Include="images\demo\avatar.gif" />
+    <Content Include="images\profiles\avatar.gif" />
     <Content Include="images\demo\imgl.gif" />
     <Content Include="images\demo\imgr.gif" />
-    <Content Include="images\demo\index.html" />
     <Content Include="images\index.html" />
     <Content Include="layout\index.html" />
     <Content Include="layout\scripts\index.html" />

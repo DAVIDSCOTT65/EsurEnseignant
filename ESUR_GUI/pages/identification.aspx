@@ -17,6 +17,10 @@
                     <td>
                        <asp:TextBox ID="txtNom" runat="server" Width="406px" Height="27px"></asp:TextBox>
                     
+                        <div class="center">
+                            <asp:Image ID="Image1" runat="server" Height="78px" Width="157px" />
+                        </div>
+                    
                         <br />
                         <asp:FileUpload ID="FileUpload1" runat="server" Width="413px" />
                     
@@ -97,6 +101,7 @@
                     </td>
                 </tr>
             </table>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <br /><br /><br />
             <asp:Button ID="btnSave" runat="server" Text="Enregistrer" CssClass="auto-style6" Height="34px" OnClick="btnSave_Click" ToolTip="Save the datas" Width="263px" />
         <br /><br /><br />
