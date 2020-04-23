@@ -87,7 +87,7 @@ namespace ESUR_GUI
                         //if (height==200 && width==200)
                         //{
                             FileUpload1.SaveAs(Server.MapPath("~/images/profiles/") + FileUpload1.FileName + ".jpg");
-                            Image1.ImageUrl= "~/images/profiles/" +FileUpload1.FileName + ".jpg";
+                            //Image1.ImageUrl= "~/images/profiles/" +FileUpload1.FileName + ".jpg";
                             imagelink = "../images/profiles/" + FileUpload1.FileName + ".jpg";
                             imageSaved = true;
                         //}
