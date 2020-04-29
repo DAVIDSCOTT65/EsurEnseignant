@@ -54,6 +54,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 
 #header, #topbar, #topnav, #breadcrumb, #container, #footer, #copyright{display:block; position:relative; width:960px; margin:0 auto;}
 
+
 /* ----------------------------------------------Header------------------------------------- */
 
 #header{padding:0 0 20px 0;}
