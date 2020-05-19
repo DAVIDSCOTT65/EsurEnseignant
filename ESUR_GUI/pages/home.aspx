@@ -9,28 +9,32 @@
   <div id="featured_slide">
     <div id="featured_wrap">
       <ul id="featured_tabs">
-        <li><a href="#fc1">Nullamlacus dui ipsum<br />
-          <span>Nullamlacus dui ipsum conseqlo borttis.</span></a></li>
-        <li><a href="#fc2">Nullamlacus dui ipsum<br />
-          <span>Nullamlacus dui ipsum conseqlo borttis.</span></a></li>
-        <li><a href="#fc3">Nullamlacus dui ipsum<br />
-          <span>Nullamlacus dui ipsum conseqlo borttis.</span></a></li>
-        <li class="last"><a href="#fc4">Nullamlacus dui ipsum<br />
-          <span>Nullamlacus dui ipsum conseqlo borttis.</span></a></li>
+        <li><a href="#fc1">Non payés<br />
+          <span></span></a></li>
+        <li><a href="#fc2">Nouvelle unité<br />
+          <span></span></a></li>
+        <li><a href="#fc3">Non Imatriculés<br />
+          <span></span></a></li>
+        <li class="last"><a href="#fc4">Matriculés<br />
+          <span></span></a></li>
       </ul>
       <div id="featured_content">
-        <div class="featured_box" id="fc1"><img src="../images/demo/1.gif" alt="" />
+        <div class="featured_box" id="fc1">
+          <h1 style="text-align:center; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNP" runat="server" Text="Label" ForeColor="Black" Font-Size="Medium" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
+            <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
+        </div>
+        <div class="featured_box" id="fc2">
+          <h1 style="text-align:center; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNU" runat="server" Text="Label" ForeColor="Black" Font-Size="Medium" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
           <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
-        <div class="featured_box" id="fc2"><img src="../images/demo/2.gif" alt="" />
-          <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
-        </div>
-        <div class="featured_box" id="fc3"><img src="../images/demo/3.gif" alt="" />
+        <div class="featured_box" id="fc3">
+          <h1 style="text-align:center; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNI" runat="server" Text="Label" ForeColor="Black" Font-Size="Medium" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
           <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
         <div class="featured_box" id="fc4"><img src="../images/demo/4.gif" alt="" />
           <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </div>
@@ -41,27 +45,27 @@
     <div id="hpage">
       <ul>
         <li>
-          <h2>Indonectetus facilis leo</h2>
-          <div class="imgholder"><a href="#"><img src="../images/demo/200x140.gif" alt="" /></a></div>
-          <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>. Etmetus conse cte tuer leo nisl justo sed vest vitae nunc massa scelerit</p>
+          <h2>Professeur</h2>
+          <div class="imgholder"><a href="#"><img src="../images/demo/teach.gif" alt="" /></a></div>
+          <p>Souvent noté Pr ou Prof., est un terme utiliser comme un titre academique lié à l'histoire des universités. Il trouve ses origines dans les titulaires d'une chaire universitaire, ainsi amené à leur savoir à la manière des arche...</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
         <li>
-          <h2>Indonectetus facilis leo</h2>
-          <div class="imgholder"><a href="#"><img src="../images/demo/200x140.gif" alt="" /></a></div>
-          <p>This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer.</p>
+          <h2>Chef de travaux (CT)</h2>
+          <div class="imgholder"><a href="#"><img src="../images/demo/teach2.gif" alt="" /></a></div>
+          <p>Le chef de travaux est à la fois un spécialiste d'une discipline et le détenteur de compétences élargies qui en font un véritable &quot;généraliste&quot; de l'enseignement technique. Il exerce sa fonction à l'intérieur et à l'extérieur de l'...</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
         <li>
-          <h2>Indonectetus facilis leo</h2>
-          <div class="imgholder"><a href="#"><img src="../images/demo/200x140.gif" alt="" /></a></div>
-          <p>Seddui vestibulum vest mi liberos estibulum urna at eget amet sed. Etmetus consectetuer leo nisl justo sed vest vitae nunc massa scelerit. Namaucibulum lor ligula nullam risque et ristie sollis sapien nulla neque.</p>
+          <h2>Master</h2>
+          <div class="imgholder"><a href="#"><img src="../images/demo/teach3.gif" alt="" /></a></div>
+          <p>Dans le système éducatif congolais le master est à la fois un diplome national de l'enseignement supérieur et un grade universitaire, validant un troisième cycle de l'enseignement superieur.</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
         <li class="last">
-          <h2>Indonectetus facilis leo</h2>
-          <div class="imgholder"><a href="#"><img src="../images/demo/200x140.gif" alt="" /></a></div>
-          <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi pen as dapibulum orna. Urna ultrices quis curabitur phasellentesque congue magnis vestibulum. Orcieleifendimentum risuspenatoque massa nunc.</p>
+          <h2>Assistants</h2>
+          <div class="imgholder"><a href="#"><img src="../images/demo/teach1.gif" alt="" /></a></div>
+          <p>En France,le corps des assistants d'education (AE ou AED) a été créé par la loi Ferry du 30 avril 2003, dans le but de remplacer progressivement les maitres d'internat(MI) et surveillants d'externat(SE).</p>
           <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
         </li>
       </ul>

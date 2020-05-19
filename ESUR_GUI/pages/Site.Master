@@ -28,11 +28,45 @@
         }
         .auto-style3 {
             height: 81px;
-            margin-left: 36;
+            margin-left: 36px;
             margin-top: 0px;
         }
         .auto-style4 {
             height: 255px;
+        }
+        .roundedcorner{
+            font-size:11pt;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:1px;
+            margin-bottom:1px;
+            padding:3px;
+            border-top:1px;
+            border-left:1px ;
+            border-right:1px ;
+            border-bottom:1px;
+            -moz-border-radius:8px;
+            -webkit-border-radius:8px;
+
+        }
+        .background{
+            background-color:black;
+            filter:alpha(opacity=90);
+            opacity:0.8;
+        }
+        .popup{
+            background-color:dimgrey;
+            border-width:3px;
+            border-style:none;
+            border-color:black;
+            padding-top:10px;
+            padding-left:10px;
+            width:400px;
+            height:300px;
+        }
+        .auto-style5 {
+            color: #E5E2C9;
+            background-color: #48282F;
         }
     </style>
 </head>
@@ -121,43 +155,43 @@
     <div class="wrapper col5">
   <div id="footer">
       <div id="newsletter">
-      <h2>Stay In The Know !</h2>
-      <p>Please enter your email to join our mailing list</p>
+      <h2>Rester Au Courant!</h2>
+      <p>Veuillez saisir votre email pour rejoindre notre liste de diffusion</p>
         <fieldset>
           <legend>News Letter</legend>
           <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
           <input type="submit" name="news_go" id="news_go" value="GO" class="auto-style1" />
         </fieldset>
-      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+      <p>&nbsp;<a href="#">cliquez here &raquo;</a> pour vous désabonner</p>
     </div>
     <div class="footbox">
-      <h2>Lacus interdum</h2>
+      <h2>Autres liens</h2>
       <ul>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
+        <li class="auto-style5"><a href="#">Présidence de la RDC</a></li>
+        <li class="auto-style5"><a href="#">Primature</a></li>
+        <li class="auto-style5"><a href="#">Gouvernement Nord-Kivu</a></li>
+        <li class="auto-style5" style="height: 16px"><a href="#">Riposte COVID-19</a></li>
+        <li class="last"></li>
       </ul>
     </div>
     <div class="footbox">
-      <h2>Lacus interdum</h2>
+      <h2>Contact</h2>
       <ul>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
+        <li><a href="#">Email :</a></li>
+        <li><a href="#">&nbsp;contact@minesu.gouv.cd</a></li>
+        <li>+243971778161</li>
+        <li>+243994232586</li>
+        <li class="last"></li>
       </ul>
     </div>
     <div class="footbox">
-      <h2>Lacus interdum</h2>
+      <h2>Adresse :</h2>
       <ul>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Praesent et eros</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Suspendisse in neque</a></li>
-        <li class="last"><a href="#">Praesent et eros</a></li>
+        <li>Boulevard Tshatshi N°67</li>
+        <li class="auto-style5"><a href="#">Kinshasa /Gombe, RDC</a></li>
+        <li class="auto-style5"><a href="#">Cabinet :</a></li>
+        <li class="auto-style5"><a href="#">Immeuble Kasai 4èm</a>e et 7ème Niveau</li>
+        <li class="last" style="color: #E5E2C9; background-color: #48282F"></li>
       </ul>
     </div>
     <br class="clear" />

@@ -26,3 +26,5 @@ E:\DAVID\PROJETBDD\ESUR_Identification\ESUR_GUI\bin\Microsoft.CodeDom.Providers.
 E:\DAVID\PROJETBDD\ESUR_Identification\ESUR_GUI\obj\Debug\ESUR_GUI.csprojResolveAssemblyReference.cache
 E:\DAVID\PROJETBDD\ESUR_Identification\ESUR_GUI\obj\Debug\ESUR_GUI.dll
 E:\DAVID\PROJETBDD\ESUR_Identification\ESUR_GUI\obj\Debug\ESUR_GUI.pdb
+E:\DAVID\PROJETBDD\ESUR_Identification\ESUR_GUI\bin\AjaxControlToolkit.dll
+E:\DAVID\PROJETBDD\ESUR_Identification\ESUR_GUI\obj\Debug\ESUR_GUI.dll.licenses

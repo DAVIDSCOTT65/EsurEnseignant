@@ -24,7 +24,7 @@ namespace ESUR_GUI
             {
                 Glossaires.getInstance().chargeCombo(cmbType, "SELECT_DESIGNATION_TYPE");
                 Glossaires.getInstance().chargeCombo(cmbGrade, "SELECT_DESIGNATION_GRADE");
-                Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom, txtPrenom, cmbSexe, txtAnnee, txtFiliere, cmbGrade, cmbType, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
+                Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom, txtPrenom, cmbSexe, txtAnnee, txtFiliere, cmbGrade, cmbType, phoneTxt, emaiolTxt, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
             }  
         }
 
@@ -49,6 +49,8 @@ namespace ESUR_GUI
                     en.Pseudo = userTxt.Text;
                     en.Pass = txtPass.Text;
                     en.UrlImage = imagelink;
+                    en.Telephone = phoneTxt.Text;
+                    en.Email = emaiolTxt.Text;
 
 
 
@@ -83,9 +85,9 @@ namespace ESUR_GUI
                         int width = img.Width;
                         //if (height==200 && width==200)
                         //{
-                            FileUpload1.SaveAs(Server.MapPath("~/images/profiles/") + FileUpload1.FileName + ".jpg");
+                            FileUpload1.SaveAs(Server.MapPath("~/images/profiles/") + FileUpload1.FileName);
                             //Image1.ImageUrl= "~/images/profiles/" +FileUpload1.FileName + ".jpg";
-                            imagelink = "../images/profiles/" + FileUpload1.FileName + ".jpg";
+                            imagelink = "../images/profiles/" + FileUpload1.FileName;
                             imageSaved = true;
                         //}
                         //else

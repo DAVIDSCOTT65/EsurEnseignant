@@ -15,9 +15,15 @@ namespace ESUR_GUI
         public int idComp = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           txtMatricule.Text = UserSession.GetInstance().Id.ToString();
         }
-
+        public int Session
+        {
+            get
+            {
+                return UserSession.GetInstance().Id;
+            }
+        }
         protected void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -41,6 +47,11 @@ namespace ESUR_GUI
 
 
             }
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

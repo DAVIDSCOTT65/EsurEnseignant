@@ -10,6 +10,7 @@ namespace ESUR_GUI.Classes
         private static UserSession inst;
 
         private int _id;
+        public string _matricule;
         private string _userName;
         private string _accessLevel;
         private string _fonction;
@@ -17,7 +18,18 @@ namespace ESUR_GUI.Classes
         private string _etat;
         private string _maison;
 
+        public string Matricule
+        {
+            get
+            {
+                return _matricule;
+            }
 
+            set
+            {
+                _matricule = value;
+            }
+        }
         public string UserName
         {
             get

@@ -94,6 +94,24 @@ namespace ESUR_GUI {
         protected global::System.Web.UI.WebControls.DropDownList cmbType;
         
         /// <summary>
+        /// phoneTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox phoneTxt;
+        
+        /// <summary>
+        /// emaiolTxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox emaiolTxt;
+        
+        /// <summary>
         /// userTxt control.
         /// </summary>
         /// <remarks>

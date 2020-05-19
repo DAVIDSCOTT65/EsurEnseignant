@@ -45,6 +45,10 @@
     <CodeAnalysisRuleSet />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20820.6783, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\David Mirindi\Documents\AjaxControlToolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -76,13 +80,13 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\menus.css" />
     <Content Include="css\reset.css" />
-    <Content Include="images\profiles\DVD.PNG" />
-    <Content Include="images\profiles\DVD1.jpg" />
     <Content Include="images\demo\IMG_4396.JPG" />
     <Content Include="images\demo\IMG_4397.JPG" />
     <Content Include="images\demo\IMG_4398.JPG" />
     <Content Include="images\demo\indexgfgy.jpg" />
     <Content Include="images\demo\indexgggguyygy.jpg" />
+    <Content Include="images\profiles\David.jpg" />
+    <Content Include="images\profiles\DVD.jpg" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
@@ -233,7 +237,9 @@
       <Name>LibraryEnseignant</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -108,7 +108,7 @@ namespace ESUR_GUI.Classes
                 rd.Dispose();
             }
         }
-        public void chargeTextBox(int id,TextBox txt1, TextBox txt2, TextBox txt3, DropDownList txt4, TextBox txt5, TextBox txt6, DropDownList txt7, DropDownList txt8, string procedure,int condition)
+        public void chargeTextBox(int id,TextBox txt1, TextBox txt2, TextBox txt3, DropDownList txt4, TextBox txt5, TextBox txt6, DropDownList txt7, DropDownList txt8, TextBox txt9, TextBox txt10, string procedure,int condition)
         {
             connecter();
             if (ImplementeConnexion.Instance.Conn.State == System.Data.ConnectionState.Closed)
@@ -135,6 +135,8 @@ namespace ESUR_GUI.Classes
                     txt6.Text = rd["FiliereEtude"].ToString();
                     txt7.Text = rd["Grade"].ToString();
                     txt8.Text = rd["Type"].ToString();
+                    txt9.Text = rd["Telephone"].ToString();
+                    txt10.Text = rd["Email"].ToString();
                 }
                 rd.Close();
                 rd.Dispose();

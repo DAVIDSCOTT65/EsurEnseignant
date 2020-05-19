@@ -7,7 +7,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentBody" runat="server">
     <section id="main-content">
         <section id="wrapper">
-            <div class="row">
+            <div>
                 <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
@@ -78,7 +78,18 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-1">
+                                    <div class="form-group">
+                                        <asp:TextBox ID="phoneTxt" Enabled="true" runat="server" CssClass="form-control input-sm" Placeholder="Téléphone"></asp:TextBox>
+                                    </div>
+                                </div>
+                                 <div class="col-md-4 col-md-offset-1">
+                                    <div class="form-group">
+                                        <asp:TextBox ID="emaiolTxt" Enabled="true" runat="server" CssClass="form-control input-sm" Placeholder="Email"></asp:TextBox>
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-1">
