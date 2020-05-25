@@ -28,7 +28,7 @@ namespace ESUR_GUI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMatricule;
+        public global::System.Web.UI.WebControls.TextBox txtMatricule;
         
         /// <summary>
         /// Button1 control.
@@ -82,7 +82,7 @@ namespace ESUR_GUI {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        public global::System.Web.UI.WebControls.Button btnSave;
         
         /// <summary>
         /// ModalPopupExtender1 control.

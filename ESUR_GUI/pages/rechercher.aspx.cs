@@ -43,5 +43,19 @@ namespace ESUR_GUI.pages
 
             }
         }
+        protected void idEnseignant_click(object sender, EventArgs e)
+        {
+            try
+            {
+                competence c = new competence();
+                
+
+            }
+            catch (Exception ex)
+            {
+
+
+            }
+        }
     }
 }

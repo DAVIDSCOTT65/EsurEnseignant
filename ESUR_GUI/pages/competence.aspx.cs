@@ -15,7 +15,16 @@ namespace ESUR_GUI
         public int idComp = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-           txtMatricule.Text = UserSession.GetInstance().Id.ToString();
+            if (UserSession.GetInstance().Id == 0)
+            {
+
+                txtMatricule.Text = Request.QueryString["ref_ens"].ToString();
+                Button1.Enabled = false;
+            }
+            else
+            {
+                txtMatricule.Text = UserSession.GetInstance().Id.ToString();
+            }   
         }
         public int Session
         {
