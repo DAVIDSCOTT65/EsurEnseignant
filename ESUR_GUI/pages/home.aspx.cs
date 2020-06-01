@@ -16,6 +16,7 @@ namespace ESUR_GUI.pages
             lblNP.Text = en.NbrEnseignant("NP").ToString();
             lblNU.Text = en.NbrEnseignant("NU").ToString();
             lblNI.Text = en.NbrEnseignant("NI").ToString();
+            lblAll.Text = en.NbrEnseignant("All").ToString();
         }
     }
 }

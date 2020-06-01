@@ -86,15 +86,15 @@
         
           <fieldset>
             <legend>Teachers Login Form</legend>
-              <asp:TextBox ID="teacherName" runat="server" placeholder="UserName"></asp:TextBox>
-              <asp:TextBox ID="teacherPass" runat="server"  placeholder="Password"></asp:TextBox>
+              <asp:TextBox ID="teacherName" runat="server" CssClass="form-control" placeholder="UserName"></asp:TextBox>
+              <br />
+              <asp:TextBox ID="teacherPass" TextMode="Password" runat="server" CssClass="form-control"  placeholder="Password"></asp:TextBox>
             
-            <p>
+             <br />
               
-              <asp:Button ID="btnConnect" runat="server" Text="Button" OnClick="btnConnect_Click"/>
+              <asp:Button ID="btnConnect" runat="server" Text="Connexion" OnClick="btnConnect_Click"/>
               &nbsp;
               
-            </p>
           </fieldset>
         
       </div>

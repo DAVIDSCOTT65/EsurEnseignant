@@ -99,12 +99,12 @@
                                 </div>
                                  <div class="col-md-4 col-md-offset-1">
                                     <div class="form-group">
-                                       <asp:TextBox ID="txtPass" Enabled="true" runat="server" CssClass="form-control"></asp:TextBox>
+                                       <asp:TextBox ID="txtPass" TextMode="Password" Enabled="true" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-md-offset-1">
                                     <div class="form-group">
-                                       <asp:TextBox ID="txtConf" Enabled="true" runat="server" CssClass="form-control"></asp:TextBox>
+                                       <asp:TextBox ID="txtConf" TextMode="Password" Enabled="true" runat="server" CssClass="form-control"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>

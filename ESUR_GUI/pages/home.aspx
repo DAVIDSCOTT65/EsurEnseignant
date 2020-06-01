@@ -15,23 +15,24 @@
           <span></span></a></li>
         <li><a href="#fc3">Non Imatriculés<br />
           <span></span></a></li>
-        <li class="last"><a href="#fc4">Matriculés<br />
+        <li class="last"><a href="#fc4">All<br />
           <span></span></a></li>
       </ul>
       <div id="featured_content">
-        <div class="featured_box" id="fc1">
-          <h1 style="text-align:center; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNP" runat="server" Text="Label" ForeColor="Black" Font-Size="Medium" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
+        <div class="featured_box" id="fc1" style="background-color:aqua;">
+          <h1 style="text-align:center; padding-top:131px; padding-bottom:131px; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNP" runat="server" Text="Label"  ForeColor="Black" Font-Size="XX-Large" Font-Bold="True" Height="23px" Width="23px" Font-Italic="True"></asp:Label></h1> 
             <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
         <div class="featured_box" id="fc2">
-          <h1 style="text-align:center; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNU" runat="server" Text="Label" ForeColor="Black" Font-Size="Medium" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
+          <h1 style="text-align:center; padding-top:131px; padding-bottom:131px; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNU" runat="server" Text="Label" ForeColor="Black" Font-Size="XX-Large" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
           <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
         <div class="featured_box" id="fc3">
-          <h1 style="text-align:center; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNI" runat="server" Text="Label" ForeColor="Black" Font-Size="Medium" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
+          <h1 style="text-align:center; padding-top:131px; padding-bottom:131px; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblNI" runat="server" Text="Label" ForeColor="Black" Font-Size="XX-Large" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
           <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
-        <div class="featured_box" id="fc4"><img src="../images/demo/4.gif" alt="" />
+        <div class="featured_box" id="fc4">
+            <h1 style="text-align:center; padding-top:131px; padding-bottom:131px; font-family: 'Century Gothic'; font-size: 30px; font-weight: bold; font-style: normal; font-variant: normal; color: #000000; background-color: #FFFFFF;"><asp:Label ID="lblAll" runat="server" Text="Label" ForeColor="Black" Font-Size="XX-Large" Font-Bold="True" Height="23" Width="23"></asp:Label></h1> 
           <div class="floater"><a href="#">Continue Reading &raquo;</a></div>
         </div>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

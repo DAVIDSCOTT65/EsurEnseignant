@@ -21,17 +21,17 @@
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:TextBox ID="txtDesign" Enabled="true" runat="server" Placeholder="Designation type"></asp:TextBox>
+                                        <asp:TextBox ID="txtDesign" CssClass="form-control" Enabled="true" runat="server" Placeholder="Designation type"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:TextBox ID="txtAcro" runat="server" Placeholder="Acronyme"></asp:TextBox>
+                                        <asp:TextBox ID="txtAcro" CssClass="form-control" runat="server" Placeholder="Acronyme"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:TextBox ID="txtDate" Enabled="true" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtDate" CssClass="form-control" Enabled="true" runat="server"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
