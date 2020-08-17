@@ -19,15 +19,18 @@ namespace ESUR_GUI.pages
         {
             try
             {
-                TypeEnseignant t = new TypeEnseignant();
+                if (txtDesign.Text != "" && txtAcro.Text != "")
+                {
+                    TypeEnseignant t = new TypeEnseignant();
 
-                t.Id = id;
-                t.Designation = txtDesign.Text;
-                t.Accronyme = txtAcro.Text;
+                    t.Id = id;
+                    t.Designation = txtDesign.Text;
+                    t.Accronyme = txtAcro.Text;
 
-                t.SaveDatas(t);
+                    t.SaveDatas(t);
 
-                Response.Redirect("type.aspx");
+                    Response.Redirect("type.aspx"); 
+                }
 
             }
             catch (Exception ex)

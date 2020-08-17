@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="col-md-4 col-md-offset-1">
                                     <div class="form-group">
-                                        <asp:Label ID="Label1" runat="server" Visible="false" Text="Message" CssClass="form-control"></asp:Label>
+                                        <asp:Label ID="Statut" runat="server" Text="Message" CssClass="form-control"></asp:Label>
                                     </div>
                                 </div>
                                  
@@ -131,33 +131,6 @@
                         </div>
                     </section>
                 </div>
-            </div>
-            <div class="container mb-3 mt-3" style="width: 100%">
-                <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped table-bordered" AutoGenerateColumns="False" DataSourceID="SqlDataSource" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
-                    <Columns>
-                        <asp:BoundField DataField="Matricule" HeaderText="Matricule" SortExpression="Matricule" />
-                        <asp:BoundField DataField="Nom" HeaderText="Nom" SortExpression="Nom" />
-                        <asp:BoundField DataField="Postnom" HeaderText="Postnom" SortExpression="Postnom" />
-                        <asp:BoundField DataField="Prenom" HeaderText="Prenom" SortExpression="Prenom" />
-                        <asp:BoundField DataField="Sexe" HeaderText="Sexe" SortExpression="Sexe" />
-                        <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
-                        <asp:BoundField DataField="AnneeFinEtude" HeaderText="AnneeFinEtude" SortExpression="AnneeFinEtude" />
-                        <asp:BoundField DataField="FiliereEtude" HeaderText="FiliereEtude" SortExpression="FiliereEtude" />
-                        <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
-                        <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
-                    </Columns>
-
-                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#242121" />
-
-                </asp:GridView>
-                <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ESUR_DATABASAEConnectionString2 %>" SelectCommand="SELECT [Matricule], [Nom], [Postnom], [Prenom], [Sexe], [DOB], [AnneeFinEtude], [FiliereEtude], [Grade], [Type] FROM [Affichage_Enseignant]"></asp:SqlDataSource>
             </div>
         </section>
     </section>

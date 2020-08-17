@@ -24,7 +24,7 @@ namespace ESUR_GUI
             {
                 Glossaires.getInstance().chargeCombo(cmbType, "SELECT_DESIGNATION_TYPE");
                 Glossaires.getInstance().chargeCombo(cmbGrade, "SELECT_DESIGNATION_GRADE");
-                Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom, txtPrenom, cmbSexe, txtAnnee, txtFiliere, cmbGrade, cmbType, phoneTxt, emaiolTxt, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
+                Glossaires.getInstance().chargeTextBox(id, txtNom, txtPostnom, txtPrenom, cmbSexe, txtAnnee, txtFiliere, cmbGrade, cmbType, phoneTxt, emaiolTxt, Statut, "SELECT_ENSEIGNANT", UserSession.GetInstance().Id);
             }  
         }
 
@@ -51,12 +51,17 @@ namespace ESUR_GUI
                     en.UrlImage = imagelink;
                     en.Telephone = phoneTxt.Text;
                     en.Email = emaiolTxt.Text;
+                    en.Statut = "En attente";
 
 
 
                     en.SaveDatas(en);
 
-                    Response.Redirect("identification.aspx");
+                    Statut.Text = "En attente de la confirmation";
+
+                    //Response.Redirect("identification.aspx");
+                    Statut.Visible = true;
+                    
                 }
                 
             }
@@ -102,12 +107,12 @@ namespace ESUR_GUI
                 }
                 else
                 {
-                    Label1.Text = "Only JPEG/JPG Image File Acceptable - Please Upload Image File Again";
+                    Statut.Text = "Only JPEG/JPG Image File Acceptable - Please Upload Image File Again";
                 }
             }
             else
             {
-                Label1.Text = "You have not selected any file - Browse and Select File First";
+                Statut.Text = "You have not selected any file - Browse and Select File First";
             }
             return imageSaved;
         }

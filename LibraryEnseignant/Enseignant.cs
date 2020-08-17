@@ -26,6 +26,7 @@ namespace LibraryEnseignant
         public string UrlImage { get; set; }
         public string Telephone { get; set; }
         public string Email { get; set; }
+        public string Statut { get; set; }
         public string Pseudo { get; set; }
         public string Pass { get; set; }
         private byte[] ConvertImageToByte(FileUpload img)
@@ -79,6 +80,7 @@ namespace LibraryEnseignant
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@url", 255, DbType.String, e.UrlImage));
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@telephone", 255, DbType.String, e.Telephone));
                 cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@mail", 255, DbType.String, e.Email));
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@statut", 255, DbType.String, e.Statut));
 
 
                 cmd.ExecuteNonQuery();
@@ -86,6 +88,38 @@ namespace LibraryEnseignant
                 SaveLogin(e);
 
                 
+            }
+        }
+        public void Confirmation(string matricule)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "CONFIRMER_IDENTITE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@matricule", 10, DbType.String, matricule));
+
+                cmd.ExecuteNonQuery();
+
+
+            }
+        }
+        public void Suppression(string matricule)
+        {
+            if (ImplementeConnexion.Instance.Conn.State == ConnectionState.Closed)
+                ImplementeConnexion.Instance.Conn.Open();
+            using (IDbCommand cmd = ImplementeConnexion.Instance.Conn.CreateCommand())
+            {
+                cmd.CommandText = "SUPRIMER_DEMANDE";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(Parametres.Instance.AddParametres(cmd, "@matricule", 10, DbType.String, matricule));
+
+                cmd.ExecuteNonQuery();
+
+
             }
         }
         public int NbrEnseignant(string type)

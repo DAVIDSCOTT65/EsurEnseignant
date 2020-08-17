@@ -21,15 +21,16 @@ namespace ESUR_GUI.pages
         {
             try
             {
-                Grade g = new Grade();
+                if (txtDesign.Text != "" && txtAcro.Text != "")
+                {
+                    Grade g = new Grade();
 
-                g.Id = id;
-                g.Designation = txtDesign.Text;
-                g.Acronyme = txtAcro.Text;
+                    g.Id = id;
+                    g.Designation = txtDesign.Text;
+                    g.Acronyme = txtAcro.Text;
 
-                g.SaveDatas(g);
-
-                Response.Redirect("grade.aspx");
+                    g.SaveDatas(g);Response.Redirect("grade.aspx"); 
+                }
             }
             catch (Exception ex)
             {
